@@ -42,11 +42,17 @@ function getXP(obj) {
     Hard: 40,
     "Very Hard": 80,
   };
+  const key = Object.keys(obj);
   let count = 0;
-  for (const key in obj) {
-    count += obj[key] * xpObj[key];
-  }
-  return count + "XP";
+     key.forEach(el => {
+    count += obj[el] * xpObj[el];
+  });
+  return count += 'XP'
+
+//   for (const key in obj) {
+//     count += obj[key] * xpObj[key];
+//   }
+//   return count + "XP";
 }
 console.log(
   getXP({
