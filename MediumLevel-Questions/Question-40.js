@@ -16,22 +16,27 @@
 // returns: A new function.
 // Examples
 const objects = [
-  { "a": 1, "b": 2, "c": 3 },
-  { "a": 4, "b": 5, "c": 6 }
-]
+  { a: 1, b: 2, c: 3 },
+  { a: 4, b: 5, c: 6 },
+];
 // _.find(objects, _.matchesProperty("a", 4))
 // ➞ [{ "a": 4, "b": 5, "c": 6 }]
 
-function findPair(arrObj, key, val){
-    // for (let i = 0; i < arrObj.length; i++) {
-    //     for (const keys in arrObj[i]) {
-    //          if(keys === key && arrObj[i][keys] === val){
-    //              return arrObj[i]
-    //          }
-    //     }
-    // }
-//=====================================================
-
-
+function findPair(arrObj, key, val) {
+  // for (let i = 0; i < arrObj.length; i++) {
+  //     for (const keys in arrObj[i]) {
+  //          if(keys === key && arrObj[i][keys] === val){
+  //              return arrObj[i]
+  //          }
+  //     }
+  // }
+  //=====================================================
+  for (const element of arrObj) {
+    for (const keys in element) {
+      if (keys === key && element[key] === val) {
+        return element;
+      }
+    }
+  }
 }
 console.log(findPair(objects, "c", 6));
