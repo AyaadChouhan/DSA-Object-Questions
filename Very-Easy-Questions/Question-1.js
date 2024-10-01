@@ -30,5 +30,4 @@ class getVoteCount{
 const data = new getVoteCount({ upvotes: 132, downvotes: 132 });
 const data2 = new getVoteCount({ upvotes: 2, downvotes: 33 });
 console.log(data2.print());
-// console.log(getVoteCount({ upvotes: 2, downvotes: 33 }));
 
