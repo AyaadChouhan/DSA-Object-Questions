@@ -27,17 +27,12 @@ function findOldest(obj) {
   //   }
 
   let keys = Object.keys(obj);
-  let values = Object.values(obj);
+  let sort = keys.sort((a, b)=>{
+    return obj[b] - obj[a];
+  })
+  return sort[0];
 
-  return values.reduce((acc, curr, index) => {
-    let getIndex= 0;
-    if (acc < curr) {
-      acc = curr;
-      getIndex = index
-    }
-    return keys[getIndex]
-  }, 0);
-  return result;
+  
 }
 console.log(
   findOldest({
@@ -49,8 +44,8 @@ console.log(
 );
 console.log(
   findOldest({
-    Emma: 71,
     Jack: 45,
+    Emma: 71,
     Amy: 15,
     Ben: 29,
   })
