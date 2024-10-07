@@ -8,12 +8,12 @@
 
 // getVoteCount({ upvotes: 132, downvotes: 132 }) ➞ 0
 
-// function getVoteCount(obj) {
-//     let val = Object.values(obj)
-// //    return val[0] - val[1]
-// return obj.upvotes - obj.downvotes
-// }
-
+function getVoteCount(obj) {
+    let val = Object.values(obj)
+//    return val[0] - val[1]
+return obj.upvotes - obj.downvotes
+}
+console.log(getVoteCount({ upvotes: 2, downvotes: 33 }));
 // let getVoteCount = ({upvotes, downvotes}) => {
 //     return upvotes - downvotes
 // }
