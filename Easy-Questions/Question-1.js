@@ -22,6 +22,6 @@ drinks = [
   { name: "lemonade", price: 50 },
   { name: "lime", price: 10 },
 ];
-console.log(drinks);
+console.log(drinks)
 
 console.log(sortDrinkByPrice(drinks));
