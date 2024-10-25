@@ -12,10 +12,16 @@
 // mapLetters("grapes") ➞ { g: [0], r: [1], a: [2], p: [3], e: [4], s: [5] }
 
 function mapLetters(str) {
-  let obj = {};
-  for (let i = 0; i < str.length; i++) {
-    obj[str[i]] = [i]
-  }
-  return obj
+  // let obj = {};
+  // for (let i = 0; i < str.length; i++) {
+  //   obj[str[i]] = [i]
+  // }
+  // return obj
+
+  let arr = str.split('');
+    return arr.reduce((acc, curr, index)=>{
+        acc[curr] = [index]
+        return acc
+    }, {})
 }
 console.log(mapLetters("grapes"));
